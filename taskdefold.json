@@ -1,0 +1,24 @@
+{
+  "executionRoleArn": "arn:aws:iam::529088270196:role/ecsTaskExecutionRole", 
+  "networkMode": "awsvpc", 
+  "family": "task-api-blacklist", 
+  "memory": "1024", 
+  "cpu": "512", 
+  "containerDefinitions": [
+    {
+      "portMappings": [
+        {
+          "protocol": "tcp", 
+          "containerPort": 8080, 
+          "hostPort": 8080
+        }
+      ], 
+      "image": "529088270196.dkr.ecr.us-east-1.amazonaws.com/blacklistapi:latest", 
+      "essential": true, 
+      "name": "container-blacklist"
+    }
+  ], 
+  "requiresCompatibilities": [
+    "FARGATE"
+  ]
+}

@@ -37,6 +37,7 @@ artifacts:
     - imagedefinitions.json
     - imageDetail.json
     - appspec.yaml
+    - appspec.json
     - taskdef.json
 
 
