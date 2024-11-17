@@ -1,26 +1,26 @@
 {
-    "executionRoleArn": "arn:aws:iam::529088270196:role/ecsTaskExecutionRole",
-    "containerDefinitions": [
-      {
-        "portMappings": [
-          {
-            "hostPort": 8080,
-            "protocol": "tcp",
-            "containerPort": 8080
-          }
-        ],
+  "executionRoleArn": "arn:aws:iam::529088270196:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "portMappings": [
+        {
+          "hostPort": 8080,
+          "protocol": "tcp",
+          "containerPort": 8080
+        }
+      ],
 
-        "image": "<IMAGE1_NAME>",
-        "essential": true,
-        "name": "container-blacklist"
-      }
-    ],
+      "image": "<IMAGE1_NAME>",
+      "essential": true,
+      "name": "container-blacklist"
+    }
+  ],
 
-    "requiresCompatibilities": [
-      "FARGATE"
-    ],
-    "networkMode": "awsvpc",
-    "cpu": "512",
-    "memory": "1024",
-    "family": "task-app-blacklist"
-  }
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "512",
+  "memory": "1024",
+  "family": "task-api-blacklist"
+}
