@@ -1,56 +1,26 @@
 {
-  "family": "task-api-blacklist",
-  "containerDefinitions": [
+    "executionRoleArn": "arn:aws:iam::529088270196:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
       {
-          "name": "container-blacklist",
-          "image": "529088270196.dkr.ecr.us-east-1.amazonaws.com/blacklistapi",
-          "cpu": 0,
-          "portMappings": [
-              {
-                  "name": "container-app-blacklist-8080-tcp",
-                  "containerPort": 8080,
-                  "hostPort": 8080,
-                  "protocol": "tcp",
-                  "appProtocol": "http"
-              }
-          ],
-          "essential": true,
-          "environment": [
-              {
-                  "name": "DB_CONNECTION_STRING",
-                  "value": "Server=dbblacklist.cts6amcqwe6k.us-east-1.rds.amazonaws.com;Database=devops_1;Port=5432;User Id=postgres;Password=Miso2024!;"
-              }
-          ],
-          "environmentFiles": [],
-          "mountPoints": [],
-          "volumesFrom": [],
-          "ulimits": [],
-          "logConfiguration": {
-              "logDriver": "awslogs",
-              "options": {
-                  "awslogs-group": "/ecs/task-api-blacklist",
-                  "mode": "non-blocking",
-                  "awslogs-create-group": "true",
-                  "max-buffer-size": "25m",
-                  "awslogs-region": "us-east-1",
-                  "awslogs-stream-prefix": "ecs"
-              },
-              "secretOptions": []
-          },
-          "systemControls": []
+        "portMappings": [
+          {
+            "hostPort": 8080,
+            "protocol": "tcp",
+            "containerPort": 8080
+          }
+        ],
+
+        "image": "<IMAGE1_NAME>",
+        "essential": true,
+        "name": "container-blacklist"
       }
-  ],
-  "executionRoleArn": "arn:aws:iam::529088270196:role/ecsTaskExecutionRole",
-  "networkMode": "awsvpc",
-  "volumes": [],
-  "placementConstraints": [],
-  "requiresCompatibilities": [
+    ],
+
+    "requiresCompatibilities": [
       "FARGATE"
-  ],
-  "cpu": "1024",
-  "memory": "3072",
-  "runtimePlatform": {
-      "cpuArchitecture": "X86_64",
-      "operatingSystemFamily": "LINUX"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "512",
+    "memory": "1024",
+    "family": "task-api-blacklist"
   }
-}
