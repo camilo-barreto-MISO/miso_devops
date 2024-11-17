@@ -13,7 +13,7 @@
           "hostPort": 8080
         }
       ], 
-      "image": "<IMAGE1_NAME>", 
+      "image": "529088270196.dkr.ecr.us-east-1.amazonaws.com/blacklistapi:latest", 
       "essential": true, 
       "name": "container-blacklist"
     }
