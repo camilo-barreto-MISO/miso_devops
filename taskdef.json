@@ -12,7 +12,13 @@
 
         "image": "<IMAGE1_NAME>",
         "essential": true,
-        "name": "container-blacklist"
+        "name": "container-blacklist",
+        "environment": [
+          {
+              "name": "DB_CONNECTION_STRING",
+              "value": "Server=dbblacklist.cts6amcqwe6k.us-east-1.rds.amazonaws.com;Database=devops_1;Port=5432;User Id=postgres;Password=Miso2024!;"
+          }
+        ]        
       }
     ],
 
