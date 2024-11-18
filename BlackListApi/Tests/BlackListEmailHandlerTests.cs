@@ -40,5 +40,6 @@ public class BlackListEmailHandlerTests
         var blackListedEmail = await _dbContext.BlackList.FirstOrDefaultAsync(b => b.Email == command.Email);
         Assert.IsNotNull(blackListedEmail);
         Assert.AreEqual(command.Email, blackListedEmail.Email);
+        Assert.AreEqual(command.BlockedReason, blackListedEmail.BlockedReason);
     }
 }
