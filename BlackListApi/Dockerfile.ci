@@ -8,4 +8,4 @@ COPY output/publish/ .
 EXPOSE 8080
 
 # Comando para ejecutar la aplicación
-ENTRYPOINT ["dotnet", "BlackListApi2.dll"]
+ENTRYPOINT ["dotnet", "BlackListApi.dll"]
