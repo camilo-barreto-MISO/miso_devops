@@ -36,7 +36,7 @@ public class BlackListEmailHandlerTests
         var response = await _handler.Handle(command, CancellationToken.None);
 
 
-        Assert.AreEqual("Email added to the blacklist", response.Message);
+        Assert.AreEqual("Email added to the blacklist error", response.Message);
         var blackListedEmail = await _dbContext.BlackList.FirstOrDefaultAsync(b => b.Email == command.Email);
         Assert.IsNotNull(blackListedEmail);
         Assert.AreEqual(command.Email, blackListedEmail.Email);
