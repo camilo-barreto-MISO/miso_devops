@@ -17,6 +17,34 @@
           {
               "name": "DB_CONNECTION_STRING",
               "value": "Server=dbblacklist.cts6amcqwe6k.us-east-1.rds.amazonaws.com;Database=devops_1;Port=5432;User Id=postgres;Password=Miso2024!;"
+          },
+          {
+            "name": "OTEL_SERVICE_NAME",
+            "value": "BlackListAPI-ecs"
+          },
+          {
+            "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+            "value": "https://otlp.nr-data.net"
+          },
+          {
+            "name": "OTEL_EXPORTER_OTLP_HEADERS",
+            "value": "api-key=2f2455589a9420830c52e6dc36deb971FFFFNRAL"
+          },
+          {
+            "name": "OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT",
+            "value": "4095"
+          },
+          {
+            "name": "OTEL_EXPORTER_OTLP_COMPRESSION",
+            "value": "gzip"
+          },
+          {
+            "name": "OTEL_EXPORTER_OTLP_PROTOCOL",
+            "value": "http/protobuf"
+          },
+          {
+            "name": "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+            "value": "delta"
           }
         ]        
       }

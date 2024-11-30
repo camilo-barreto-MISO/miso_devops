@@ -8,7 +8,14 @@
       "launchUrl": "todos",
       "applicationUrl": "http://localhost:5056",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "OTEL_SERVICE_NAME": "BlackListAPI",
+        "OTEL_EXPORTER_OTLP_ENDPOINT": "https://otlp.nr-data.net",
+        "OTEL_EXPORTER_OTLP_HEADERS": "api-key=2f2455589a9420830c52e6dc36deb971FFFFNRAL",
+        "OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT": "4095",
+        "OTEL_EXPORTER_OTLP_COMPRESSION": "gzip",
+        "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf",
+        "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE": "delta"
       }
     }
   }

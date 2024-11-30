@@ -102,3 +102,6 @@ secrets.json
 
 # Local History for JetBrains IDEs
 .localhistory/
+
+#vs
+BlackListApi/.vs/
