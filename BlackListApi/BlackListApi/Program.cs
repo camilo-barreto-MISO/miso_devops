@@ -50,7 +50,7 @@ builder.Services.AddOpenApiDocument(config =>
 
 // Add opentelemetry
 
-var otlServiceName = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") ?? "BlackListAPI";
+var otlServiceName = Environment.GetEnvironmentVariable("OTEL_SERVICE_NAME") ?? "BlackListAPI";
 
 var resourceBuilder = ResourceBuilder.CreateDefault()
     .AddService(otlServiceName);
